@@ -61,6 +61,7 @@ app.register(updateTrip)
 app.register(getTripDetails)
 app.register(getParticipant)
 
-app.listen({ port: env.PORT }).then(() => {
-  console.log('Server is running')
+const PORT = env.PORT || 3333;
+app.listen({ port: PORT }).then(() => {
+  console.log(`Server is running on ${PORT}`)
 })
