@@ -64,7 +64,7 @@ export async function createTrip(app: FastifyInstance) {
     const message = await mail.sendMail({
       from: {
         name: 'Equipe plann.er',
-        address: 'oi@plann.er',
+        address: 'plann.er-joao-victor@outlook.com',
       },
       to: {
         name: owner_name,
@@ -84,9 +84,10 @@ export async function createTrip(app: FastifyInstance) {
         <p>Caso você não saiba do que se trata esse e-mail, apenas ignore esse e-mail.</p>
       </div>
       `.trim()
-    })
+    }).catch(console.error)
+    return
 
-    console.log(nodemailer.getTestMessageUrl(message))
+    console.log(message)
 
     return { tripId: trip.id }
   })

@@ -1,15 +1,15 @@
 import nodemailer from 'nodemailer'
+import { env } from '../env'
 
 export async function getMailClient() {
-  const account = await nodemailer.createTestAccount()
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
+    host: 'smtp-mail.outlook.com',
     port: 587,
     secure: false,
     auth: {
-      user: account.user,
-      pass: account.pass,
+      user: env.MAIL_USER,
+      pass: env.MAIL_PASS,
     }
   })
 
