@@ -85,9 +85,6 @@ export async function createTrip(app: FastifyInstance) {
       </div>
       `.trim()
     }).catch(console.error)
-    return
-
-    console.log(message)
 
     return { tripId: trip.id }
   })
