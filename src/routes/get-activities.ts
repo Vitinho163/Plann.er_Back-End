@@ -5,6 +5,13 @@ import { prisma } from "../lib/prisma";
 import { dayjs } from "../lib/dayjs"
 import { ClientError } from "../errors/client-error";
 
+interface activity {
+  id: string;
+  title: string;
+  occurs_at: Date;
+  trip_id: string;
+}
+
 export async function getActivities(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().get('/trips/:tripId/activities', {
     schema: {
@@ -37,7 +44,7 @@ export async function getActivities(app: FastifyInstance) {
 
       return {
         date: date.toDate(),
-        activities: trip.activities.filter(activity => {
+        activities: trip.activities.filter((activity: activity) => {
           return dayjs(activity.occurs_at).isSame(date, 'day')
         })
       }
