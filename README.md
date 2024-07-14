@@ -16,6 +16,7 @@ Plann.er - Back-End is a **Node.js** application developed to serve as the backe
 - [Technologies Used](#technologies-used-en)
 - [Project Structure](#project_structure_en)
 - [Installation](#installation-en)
+- [Deploy](#deploy-en)
 - [Route Documentation](#route-documentation-en)
 - [Author](#author-en)
 
@@ -26,10 +27,10 @@ Plann.er - Back-End is a **Node.js** application developed to serve as the backe
 - **[Fastify](https://fastify.dev/)**: Fast and low overhead web framework for Node.js
 - **[@fastify/cors](https://github.com/fastify/fastify-cors)**: Fastify plugin for enabling CORS.
 - **[@fastify/static](https://github.com/fastify/fastify-static)**: Fastify plugin for serving static files.
--**[@scalar/fastify-api-reference](https://github.com/scalar/scalar/tree/main/packages/fastify-api-reference#readme)**: Fastify plugin for API documentation.
--**[dayjs](https://github.com/iamkun/dayjs/)**: Fast and lightweight JavaScript date library.
--**[Zod](https://zod.dev/)**: TypeScript-first schema declaration and validation library.
--**[Nodemailer](https://nodemailer.com/)**: Node.js module for sending emails.
+- **[@scalar/fastify-api-reference](https://github.com/scalar/scalar/tree/main/packages/fastify-api-reference#readme)**: Fastify plugin for API documentation.
+- **[dayjs](https://github.com/iamkun/dayjs/)**: Fast and lightweight JavaScript date library.
+- **[Zod](https://zod.dev/)**: TypeScript-first schema declaration and validation library.
+- **[Nodemailer](https://nodemailer.com/)**: Node.js module for sending emails.
 
 ## 📁 Structure of the project <a name = "project_structure_en"></a>
 The project structure is as follows:
@@ -82,6 +83,17 @@ PORT=3333
 npm run dev
 ```
 
+## 💻 deploy <a name = "deploy-en"></a>
+
+This API was hosted directly on Render.
+
+The deployment can be accessed at the address: 
+```
+https://plann-er-back-end.onrender.com
+```
+
+>Note: As it is hosted on a free service, the application 'hibernates' after 15 minutes of inactivity. If you are trying to access the site and the BackEnd does not respond, just wait, as it will be 'initializing' the services.
+
 ## 📖 Route Documentation <a name = "route-documentation-en"></a>
 
 The documentation for all routes is available at:
@@ -109,6 +121,7 @@ Plann.er - Back-End é uma aplicação **Node.js** desenvolvida para se comunica
 - [Tecnologias Utilizadas](#tecnologias-usadas-pt)
 - [Estrutura do Projeto](#estrutura-do-projeto-pt)
 - [Instalação](#instalacao-pt)
+- [Deploy](#deploy-pt)
 - [Documentação das Rotas](#documentacao-das-rotas-pt)
 - [Autor](#autor-pt)
 
@@ -173,9 +186,25 @@ PORT=3333
 npm run dev
 ```
 
+## 💻 Deploy <a name = "deploy-pt"></a>
+
+Esta API foi hospedada diretamente no Render.
+
+O deployment pode ser acessado no seguinte endereço:
+```
+https://plann-er-back-end.onrender.com
+```
+
+>Nota: Como está hospedado em um serviço gratuito, a aplicação 'hiberna' após 15 minutos de inatividade. Se você estiver tentando acessar o site e o BackEnd não responder, basta aguardar, pois ele estará 'inicializando' os serviços.
+
 ## 📖 Documentação das Rotas <a name = "documentacao-das-rotas-pt"></a>
 
 A documentação de todas as rotas está disponível em:
+```
+https://plann-er-back-end.onrender.com/reference
+```
+
+ou caso esteja hospedado em seu desktop:
 ```
 http://localhost:{port}/reference
 ```

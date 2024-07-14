@@ -80,6 +80,28 @@
             "required": true
           }
         ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json":{
+              "schema":{
+                "properties":{
+                  "name":{
+                    "type": "string"
+                  },
+                  "email":{
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "tripId": {
+                    "type": "string",
+                    "format":"uuid"
+                  }
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "204": {
             "description": "Default Response",
