@@ -84,7 +84,7 @@ export async function createTrip(app: FastifyInstance) {
         <p>Caso você não saiba do que se trata esse e-mail, apenas ignore esse e-mail.</p>
       </div>
       `.trim()
-    }).catch(console.error)
+    })
 
     return { tripId: trip.id }
   })
