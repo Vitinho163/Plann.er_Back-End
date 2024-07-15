@@ -37,6 +37,12 @@ export async function updateTrip(app: FastifyInstance) {
       throw new ClientError('Invalid trip end date')
     }
 
+    await prisma.activity.deleteMany({
+      where: {
+        trip_id: tripId
+      }
+    })
+
     await prisma.trip.update({
       where: { id: tripId },
       data: {
